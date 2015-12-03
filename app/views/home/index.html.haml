@@ -1,2 +1,8 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.erb
+= content_for(:title, "C4$$hK4l4$$h")
+%head
+  %script{:src => "/assets/location.js"}
+  %link{:rel => :stylesheet, :type => :"text.css", :href => "/assets/main_page"}
+%container_fluid{:class => "logo"}
+  %h1 Casseurs Overflowtants
+  %p Joli site plein de fleurs
+%section{:class => "map", :id => "map"}

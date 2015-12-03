@@ -1,0 +1,36 @@
+@media all
+{
+    html
+    {
+        height: max-height;
+    }
+}
+
+*
+{
+    margin: 0;
+}
+
+html, body
+{
+    height: 100%;
+    width: 100%;
+}
+
+container_fluid
+{
+    display: block;
+    height: 500px;
+    height: 500px;
+}
+
+.logo
+{
+    background-color: red;
+    height: 20%
+}
+
+.map
+{
+    height: 80%;
+}
