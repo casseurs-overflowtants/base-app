@@ -75,7 +75,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  #config.active_record.dump_schema_after_migration = false
   # Prevent initializing the application before assets are precompiled (required
   # for heroku)
   config.assets.initialize_on_precompile = false
