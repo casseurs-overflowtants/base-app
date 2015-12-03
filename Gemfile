@@ -31,6 +31,9 @@ gem 'devise'
 # Rails admin interface
 gem 'rails_admin'
 
+# Log entries
+gem 'le'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
