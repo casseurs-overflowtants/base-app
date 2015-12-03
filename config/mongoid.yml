@@ -138,7 +138,6 @@ test:
 test:
   clients:
     default:
-      database: base_app_production
         uri: <%= ENV['MONGOLAB_URI'] %>
         options:
           safe: true
