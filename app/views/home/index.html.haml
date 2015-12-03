@@ -1,8 +1,11 @@
 = content_for(:title, "C4$$hK4l4$$h")
-%head
-  %script{:src => "/assets/location.js"}
-  %link{:rel => :stylesheet, :type => :"text.css", :href => "/assets/main_page"}
+%link{:rel => :stylesheet, :type => :"text.css", :href => "/assets/main_page"}
 %container_fluid{:class => "logo"}
   %h1 Casseurs Overflowtants
   %p Joli site plein de fleurs
 %section{:class => "map", :id => "map"}
+  %script{:src => "/assets/OpenLayers.js"}
+  %script
+    map = new OpenLayers.Map("map");
+    map.addLayer(new OpenLayers.Layer.OSM());
+    map.zoomToMaxExtent();
