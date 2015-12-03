@@ -6,6 +6,30 @@
 %section{:class => "map", :id => "map"}
   %script{:src => "/assets/OpenLayers.js"}
   %script
+    var zoom = 15;
     map = new OpenLayers.Map("map");
     map.addLayer(new OpenLayers.Layer.OSM());
-    map.zoomToMaxExtent();
+
+    if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+    function(position) {
+    lat = position.coords.latitude;
+    lon = position.coords.longitude;
+        
+    var lonLat = new OpenLayers.LonLat(lon, lat).transform(
+    new OpenLayers.Projection("EPSG:4326"),
+    map.getProjectionObject());
+
+    map.setCenter(lonLat, 14);
+
+    var size = new OpenLayers.Size(21,25);
+    var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+    var icon = new OpenLayers.Icon('/assets/marker.png', size, offset);
+
+
+    var markers = new OpenLayers.Layer.Markers( "Markers" );
+    map.addLayer(markers);
+    markers.addMarker(new OpenLayers.Marker(lonLat, icon));
+
+    });
+    }
