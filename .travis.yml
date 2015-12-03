@@ -3,6 +3,7 @@ rvm:
 env:
     - DB=postgresql
 script:
+    - rake db:setup
     - rake db:create:all
     - RAILS_ENV=test bundle exec rake db:migrate test
 notifications:
