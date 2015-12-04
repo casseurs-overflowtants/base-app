@@ -10,12 +10,13 @@ html, body
     top: 0;
     height: 100%;
     width: 100%;
+    font-style: Arial;
 }
 
 .nav_background
 {
     width: 100%;
-    height: 15%;
+    height: 17%;
 }
 
 .img_fit
@@ -40,7 +41,7 @@ html, body
 #map
 {
     width: 100%;
-    height: 85%;
+    height: 83%;
 }
 
 .float_left
@@ -51,4 +52,27 @@ html, body
 .float_right
 {
     float: right;
+}
+
+.nav_title
+{
+    position: relative;
+    top: 18%;
+    left: 2%;
+    color: #D60F16;
+}
+
+.nav_desc
+{
+    position: relative;
+    top: 38%;
+    left: 2%;
+    color: #FEFEFE;
+}
+
+#button_locate
+{
+    position: relative;
+    top: 18%;
+    right: -2%;
 }
