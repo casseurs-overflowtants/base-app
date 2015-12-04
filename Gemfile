@@ -29,6 +29,9 @@ gem 'devise'
 gem 'mongoid', '~> 5.0.0'
 gem 'bson_ext'
 
+gem 'mormon', :git => 'git://github.com/geronimod/mormon.git'
+gem 'geocoder'
+
 # Rails admin interface
 gem 'rails_admin'
 

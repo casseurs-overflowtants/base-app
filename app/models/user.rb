@@ -1,5 +1,6 @@
 class User
     include Mongoid::Document
+    include Geocoder::Model::Mongoid
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
     devise :database_authenticatable, :registerable,
@@ -22,6 +23,15 @@ class User
     field :last_sign_in_at,    type: Time
     field :current_sign_in_ip, type: String
     field :last_sign_in_ip,    type: String
+
+    field :address,            type: String
+    field :coordinates,        type: Array
+
+    geocoded_by :address,
+        :latitude  => :fetched_latitude,  # this will be overridden by the below
+        :longitude => :fetched_longitude  # same here
+
+    reverse_geocoded_by :latitude, :longitude
 
     ## Confirmable
     # field :confirmation_token,   type: String
