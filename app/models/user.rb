@@ -3,7 +3,8 @@ class User
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
     devise :database_authenticatable, :registerable,
-        :recoverable, :rememberable, :trackable, :validatable
+        :recoverable, :rememberable, :trackable, :validatable,
+        :omniauthable, :omniauth_providers => [:facebook]
 
     ## Database authenticatable
     field :email,              type: String, default: ""
@@ -33,4 +34,7 @@ class User
     # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
     # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
     # field :locked_at,       type: Time
+
+    field :provider,            type: String
+    field :uid,                 type: String
 end
