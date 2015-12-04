@@ -9,8 +9,12 @@
     %button{:type => "button", :class => "easter_egg"}
       %a{:href => "/views/starwars.html.haml"}SUCE
     %p{:class => "menu_action", :id => "menu_danger"} Danger
-    %p{:class => "menu_action", :id => "menu_maison"} Refuge
-    %p{:class => "menu_action", :id => "menu_locate"} Où suis-je ?
+
+    %script{:src => "/assets/ConnectionAPI.js"}
+    %p{:class => "menu_action", :id => "menu_maison", :onclick => "ConnectionAPI"} Refuge
+
+    %div{:class => "hidden", :id => "connectionTab"}
+    %p{:class => "menu_action", :id => "menu_locate"} Où suis-je
     %img{:src => "/assets/maison.png", :alt => "declarez-moi", :id => "button_declare"}
     %img{:src => "/assets/danger.png", :alt => "dangerisez-moi", :id => "button_danger"}
 %div{:id => "map"}
@@ -43,3 +47,6 @@
 
     });
     }
+
+%div{:id => "bottom_line", :class => "barre"}
+  %img{:src => "/assets/Fb_logo.jpg", :alt => "FB", :id => "connect_button"}
