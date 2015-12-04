@@ -29,6 +29,7 @@ html, body
 {
     height: 100%;
     object-fit: contain;
+    z-index: 1;
     background: url("fond-menu.jpg") top right no-repeat, url("bar.jpg") repeat-x;
 }
 
@@ -56,23 +57,92 @@ html, body
 
 .nav_title
 {
-    position: relative;
-    top: 18%;
+    position: absolute;
+    top: 2%;
     left: 2%;
     color: #D60F16;
 }
 
 .nav_desc
 {
-    position: relative;
-    top: 38%;
+    position: absolute;
+    top: 10%;
     left: 2%;
     color: #FEFEFE;
 }
 
 #button_locate
 {
-    position: relative;
-    top: 18%;
-    right: -2%;
+    position: absolute;
+    right: 2%;
+    top: 0.5%;
+}
+
+#button_declare
+{
+    position: absolute;
+    right: 10%;
+    top: 1.2%;
+}
+
+#button_danger
+{
+    position: absolute;
+    right: 18%;
+    top: 1.2%;
+}
+
+#button_danger:hover
+{
+    background: url("danger2.png");
+    z-index: 3;
+    opacity: 1;
+}
+
+#button_declare:hover
+{
+    background: url("maison2.png");
+    z-index: 3;
+    opacity: 1;
+}
+
+#button_locate:hover
+{
+    background: url("localisation2.png");
+    z-index: 3;
+    opacity: 1;
+}
+
+.menu_action
+{
+    word-break: break-all;
+    width: 6%;
+    color: #D60F16;
+    top: 11.5%;
+    font-size: 3;
+}
+
+#menu_danger
+{
+    position: absolute;
+    right: 16.5%;
+}
+
+#menu_maison
+{
+    position: absolute;
+    right: 8.5%;
+}
+
+#menu_locate
+{
+    position: absolute;
+    right: 1.5%;
+}
+
+.easter_egg
+{
+    position: absolute;
+    top: 1.5%;
+    right: 50%;
 }
