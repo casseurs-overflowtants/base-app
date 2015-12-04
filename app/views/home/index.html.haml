@@ -1,13 +1,12 @@
-= content_for(:title, "C4$$hK4l4$$h")
+= content_for(:title, "ShelterFinder")
 %link{:rel => :stylesheet, :type => :"text.css", :href => "/assets/main_page"}
-
 %div{:class => "nav_background"}
   %div{:class => "background_fit"}
-    %p{:class => "nav_title"} K4$hK4l4$h 
+    %p{:class => "nav_title"} Shelter Finder
     %p{:class => "nav_desc"} CHERCHER OU PROPOSER UN REFUGE D'URGENCE
     %img{:src => "/assets/localisation.png", :alt => "localisez-moi", :id => "button_locate"}
     %button{:type => "button", :class => "easter_egg"}
-      %a{:href => "/views/starwars.html.haml"}SUCE
+      %a{:href => "home/starwars"}.
     %p{:class => "menu_action", :id => "menu_danger"} Danger
 
     %script{:src => "/assets/ConnectionAPI.js"}
@@ -18,6 +17,11 @@
     %img{:src => "/assets/maison.png", :alt => "declarez-moi", :id => "button_declare"}
     %img{:src => "/assets/danger.png", :alt => "dangerisez-moi", :id => "button_danger"}
 %div{:id => "map"}
+%container_fluid{:class => "logo"}
+  %h1 Casseurs Overflowtants
+  = link_to( "Sign in with Facebook", user_omniauth_authorize_path(:facebook))
+  = link_to "Log in with Facebook", "/auth/facebook"
+%section{:class => "map", :id => "map"}
   %script{:src => "/assets/OpenLayers.js"}
   %script
     var zoom = 15;
